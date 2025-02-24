@@ -1,6 +1,22 @@
+
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolvePackageJsonImports": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true, 
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true, 
+    "esModuleInterop": true, 
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "*": ["./node_modules/*"]
+    }
   }
 }
