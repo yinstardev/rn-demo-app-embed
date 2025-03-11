@@ -90,55 +90,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {!isAuthenticated ? (
-        <View style={styles.formContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="ThoughtSpot Host"
-            value={credentials.tsHost}
-            onChangeText={(text) => setCredentials(prev => ({ ...prev, tsHost: text }))}
-          />
-          
-          <TextInput
-            style={styles.input}
-            placeholder="Username"
-            value={credentials.username}
-            onChangeText={(text) => setCredentials(prev => ({ ...prev, username: text }))}
-          />
-          
-          <TextInput
-            style={styles.input}
-            placeholder="Password (Optional)"
-            value={credentials.password}
-            secureTextEntry
-            onChangeText={(text) => setCredentials(prev => ({ ...prev, password: text }))}
-          />
-          
-          <TextInput
-            style={styles.input}
-            placeholder="Secret Key (Optional)"
-            value={credentials.secretKey}
-            secureTextEntry
-            onChangeText={(text) => setCredentials(prev => ({ ...prev, secretKey: text }))}
-          />
-
-          <TextInput 
-            style={styles.input}
-            placeholder="Liveboard-ID"
-            value={viewConfig.liveboardId}
-            onChangeText={(text) => setViewConfig(prev => ({...prev, liveboardId: text}))}
-          />
-          
-          <TouchableOpacity
-            style={styles.button}
-            onPress={handleAuthentication}
-          >
-            <Text style={styles.buttonText}>Connect</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-       <LStrong viewConfig = {viewConfig}/> 
-      )}
+     
     </SafeAreaView>
   );
 }
